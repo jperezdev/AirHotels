@@ -1,0 +1,124 @@
+/* Section: Tomorrow in Puerto Rico*/
+
+#container .today-container {
+    grid-template-columns: repeat(4, 24.5%);
+}
+
+#container .today-container .today-items {
+    height: 500px;
+}
+
+#container .today-container .today-items:nth-child(3) {
+    /*display: none;*/
+}
+
+#container .today-container .today-items:last-child {
+    display: none;
+}
+
+.paddingBottom {
+    padding-bottom: 18px;
+}
+
+
+/* Responsive menu bar */
+
+@media (max-width: 1258px) {
+    .checkbtn {
+        display: block;
+    }
+    .navbar ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: var(--nav-text-color-secondary);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    .navbar ul li {
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .navbar ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: var(--nav-text-color-primary);
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+@media (max-width: 1020px) {
+    #container .today-container {
+        grid-template-columns: repeat(3, 32.5%);
+    }
+    #container .today-container .today-items:nth-child(3) {
+        display: none;
+    }
+}
+
+@media (max-width: 932px) {
+    label.logo {
+        padding: 0px 30px;
+    }
+    #container .today-container {
+        grid-template-columns: repeat(2, 48%);
+    }
+    #container .today-container .today-items:nth-child(3) {
+        display: inline;
+    }
+}
+
+@media (max-width: 878px) {
+    #container .explore {
+        display: block;
+    }
+    #container .explore .explore-container {
+        margin: 20px 0px;
+    }
+    #container .explore div .explore-container img {
+        width: 130px;
+    }
+    #container .explore div .explore-container p {
+        padding-left: 8px;
+    }
+}
+
+@media (max-width: 618px) {
+    #container .today-container .today-items {
+        height: 400px;
+    }
+    #container .today-container .today-items img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 570px) {
+    #container .today-container {
+        grid-template-columns: 1fr;
+    }
+    #container .today-container .today-items {
+        height: 500px;
+    }
+    #container .today-container .today-items img {
+        height: 320px;
+    }
+    #container .plus .plus-container {
+        padding-top: 28%;
+    }
+}
+
+@media (max-width: 390px) {
+    .title-primary {
+        padding: 30px 0px;
+    }
+    #main #container {
+        margin: 10px;
+    }
+}

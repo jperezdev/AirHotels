@@ -1,0 +1,281 @@
+/* 
+    Developer: James D. Pérez
+    Contact Email: jamesdaniel09874@gmail.com
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Utility variables */
+
+:root {
+    --nav-text-color-primary: #fff;
+    --nav-text-color-secondary: #000;
+    --box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    --border-radius: 10px;
+}
+
+
+/* Utility classes */
+
+.clr {
+    clear: both;
+}
+
+.paddingTop {
+    padding-top: 35px;
+}
+
+.paddingBottom {
+    padding-bottom: 38px;
+}
+
+.btn-dark {
+    color: var(--nav-text-color-primary);
+    background-color: var(--nav-text-color-secondary);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    padding: 10px 60px;
+}
+
+.p-padding {
+    padding-bottom: 25px;
+}
+
+.p-padding-topBottom {
+    padding: 9px 0px;
+}
+
+.p-title {
+    font-weight: bold;
+}
+
+
+/* Showcase Banner Image */
+
+#showcase {
+    background: url(../img/banner-img.jpg) no-repeat;
+    background-size: cover;
+    height: calc(112vh - 80px);
+}
+
+
+/* Navigation Menubar */
+
+.navbar nav {
+    background: none;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: var(--nav-text-color-primary);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+.logo a {
+    color: var(--nav-text-color-primary);
+    text-decoration: none;
+}
+
+.logo a:hover {
+    background: none;
+}
+
+.logo i {
+    color: var(--nav-text-color-secondary);
+    margin-left: 5px;
+}
+
+.text-primary {
+    border-radius: 5px;
+    color: var(--nav-text-color-primary);
+    background-color: var(--nav-text-color-secondary);
+    padding: 10px;
+}
+
+.navbar nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+.navbar nav ul li a {
+    font-size: 17px;
+    padding: 7px 13px;
+    color: var(--nav-text-color-primary);
+    text-decoration: none;
+}
+
+a.active,
+a:hover {
+    background-color: var(--nav-text-color-secondary);
+    border-radius: var(--border-radius);
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: var(--nav-text-color-primary);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+/* Container */
+
+#main #container {
+    margin: 50px;
+}
+
+
+/* Section: Explore AirHotels */
+
+#container .explore {
+    display: grid;
+    align-items: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 33%);
+}
+
+#container .explore div {
+    width: 100%;
+    height: 100px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+#container .explore div .explore-container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+}
+
+#container .explore div .explore-container img {
+    width: 150px;
+    height: 100px;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+#container .explore div .explore-container p {
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 38px;
+    padding-left: 10px;
+}
+
+
+/* Section: Plus */
+
+#container .plus {
+    width: 100%;
+    height: 400px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    background-image: url('../img/stay-in-puertoRico.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#container .plus .plus-container {
+    padding-top: 10%;
+    text-align: center;
+}
+
+#container .plus .plus-container div {
+    padding-bottom: 55px;
+}
+
+#container .plus p {
+    font-size: 45px;
+    color: var(--nav-text-color-primary);
+}
+
+#container .plus .plus-logo {
+    font-size: 45px;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--nav-text-color-primary);
+    background-color: var(--nav-text-color-secondary);
+}
+
+#container .plus .plus-container .btn-img {
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--nav-text-color-primary);
+    background-color: var(--nav-text-color-secondary);
+}
+
+#container .plus .plus-container .btn-img:hover {
+    background-color: rgb(31, 30, 30);
+}
+
+
+/* Section: Tomorrow in Puerto Rico*/
+
+#container .today-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 19.5%);
+}
+
+#container .today-container .today-items {
+    width: 100%;
+    height: 500px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+#container .today-container .today-items img {
+    width: 100%;
+    height: 320px;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+#container .today-items .today-items-sup-container {
+    padding: 10px;
+}
+
+#container .today-items .today-items-sup-container .links-btn {
+    text-align: center;
+}
+
+.links-btn a:hover {
+    background-color: rgb(31, 30, 30);
+}
+
+
+/* Main Footer */
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background-color: #000;
+}
